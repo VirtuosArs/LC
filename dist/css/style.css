@@ -1,3 +1,18 @@
+@font-face {
+  font-family: Montserrat-Light;
+  src: url("../fonts/Montserrat-Light.otf");
+}
+
+@font-face {
+  font-family: Syncopate-Bold;
+  src: url("../fonts/Syncopate-Bold.ttf");
+}
+
+@font-face {
+  font-family: Syncopate-Regular;
+  src: url("../fonts/Syncopate-Regular.ttf");
+}
+
 body,
 html {
   width: 100%;
@@ -5,7 +20,7 @@ html {
 }
 
 body {
-  font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Montserrat-Light','Merriweather', 'Helvetica Neue', Arial, sans-serif;
 }
 
 hr {
@@ -34,7 +49,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Montserrat-Light','Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 
 .bg-primary {
@@ -96,7 +111,8 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   border: none;
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  border-radius: 0;
+  font-family: 'Syncopate-Bold','Merriweather', 'Helvetica Neue', Arial, sans-serif;
 }
 
 .btn-xl {
@@ -122,26 +138,41 @@ body {
   color: #000 !important;
 }
 
+@font-face {
+  font-family: Montserrat-Medium;
+  src: url("../fonts/Montserrat-Medium.otf");
+}
+
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url("../fonts/Montserrat-Regular.otf");
+}
+
 body {
   color: #2A3B8E;
-  background: #868e96;
+  background: #fff;
 }
 
 #mainNav {
   border-bottom: 1px solid rgba(33, 37, 41, 0.1);
   background-color: #fff;
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Syncopate-Regular','Merriweather', 'Helvetica Neue', Arial, sans-serif;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  font-family: din-regular !important;
   letter-spacing: 0.1rem;
+  /* The side navigation menu */
+  /* The navigation menu links */
+  /* When you mouse over the navigation links, change their color */
+  /* Position and style the close button (top right corner) */
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 }
 
 #mainNav .navbar-brand {
   font-weight: 700;
   text-transform: uppercase;
   color: #2A3B8E;
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Syncopate-Regular','Merriweather', 'Helvetica Neue', Arial, sans-serif;
 }
 
 #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
@@ -158,7 +189,7 @@ body {
   font-size: .9rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: #212529;
+  color: #000;
 }
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
@@ -168,7 +199,8 @@ body {
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link.active,
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active {
-  color: #2A3B8E !important;
+  font-family: 'Syncopate-Bold','Merriweather', 'Helvetica Neue', Arial, sans-serif;
+  color: #000 !important;
   background-color: transparent;
 }
 
@@ -193,7 +225,7 @@ body {
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link,
   #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
-    color: rgba(0, 0, 0, 0.7);
+    color: #000;
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
   #mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {
@@ -231,13 +263,93 @@ body {
   }
 }
 
+#mainNav .navside {
+  display: block;
+  border: none;
+  cursor: pointer;
+}
+
+#mainNav .n0 {
+  margin-top: 0rem;
+}
+
+#mainNav .n4 {
+  margin-top: 6.3rem;
+}
+
+#mainNav .sidenav {
+  height: auto;
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Stay on top */
+  top: 0;
+  /* Stay at the top */
+  right: 0;
+  background-color: #fff;
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 60px;
+  /* Place content 60px from the top */
+  padding-bottom: 3rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */
+}
+
+#mainNav .sidenav a {
+  padding: 8px 8px 8px 32px;
+  font-family: 'Syncopate-Regular','Merriweather', 'Helvetica Neue', Arial, sans-serif;
+  text-decoration: none;
+  font-size: .9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#mainNav .sideham {
+  color: #000;
+  padding-left: 3px;
+}
+
+#mainNav .sidenav a:hover {
+  color: #2A3B8E;
+}
+
+#mainNav .sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#mainNav #main {
+  -webkit-transition: margin-left .5s;
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+@media screen and (max-height: 450px) {
+  #mainNav .sidenav {
+    padding-top: 15px;
+  }
+  #mainNav .sidenav a {
+    font-size: 18px;
+  }
+}
+
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 56px);
   background-image: url("../img/header.jpeg");
   background-position: center center;
-  -webkit-box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.7);
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.7);
   background-size: cover;
 }
 
@@ -247,16 +359,23 @@ header.masthead hr {
 }
 
 header.masthead h1 {
+  font-family: 'Syncopate-Regular','Merriweather', 'Helvetica Neue', Arial, sans-serif;
   font-size: 2rem;
+  font-weight: bold;
 }
 
 header.masthead p {
+  font-family: 'Syncopate-Regular','Merriweather', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 300;
 }
 
 @media (min-width: 768px) {
   header.masthead p {
+    font-family: 'Syncopate-Regular','Merriweather', 'Helvetica Neue', Arial, sans-serif;
     font-size: 1.15rem;
+  }
+  header.masthead .subhead {
+    letter-spacing: 0.07rem;
   }
 }
 
@@ -268,12 +387,14 @@ header.masthead p {
     padding-bottom: 0;
   }
   header.masthead h1 {
+    font-family: 'Syncopate-Regular','Merriweather', 'Helvetica Neue', Arial, sans-serif;
     font-size: 2rem;
   }
 }
 
 @media (min-width: 1200px) {
   header.masthead h1 {
+    font-family: 'Syncopate-Regular','Merriweather', 'Helvetica Neue', Arial, sans-serif;
     font-size: 2rem;
   }
 }
@@ -283,6 +404,20 @@ header.masthead .jumbotron {
   -webkit-box-shadow: 3px 5px 11px 0 rgba(0, 0, 0, 0.5) !important;
   box-shadow: 3px 5px 11px 0 rgba(0, 0, 0, 0.5) !important;
   color: #000;
+}
+
+header.librahead {
+  background-image: url("../img/libraclips/header.png");
+}
+
+@media (min-width: 1024px) {
+  header.librahead .jumbotron {
+    margin-top: 7rem !important;
+  }
+}
+
+header.librahead {
+  background-image: url("../img/libraclips/header.png");
 }
 
 #reddeer {
@@ -298,6 +433,31 @@ header.masthead .jumbotron {
   padding: 5rem;
 }
 
+#reddeer h5 {
+  font-family: 'Syncopate-Bold','Merriweather', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: bold;
+}
+
+#reddeer p {
+  font-family: 'Montserrat-Light','Merriweather', 'Helvetica Neue', Arial, sans-serif;
+}
+
+@media (min-width: 992px) {
+  #reddeer h5 {
+    font-family: 'Syncopate-Bold','Merriweather', 'Helvetica Neue', Arial, sans-serif;
+  }
+}
+
+@media (min-width: 1200px) {
+  #reddeer h1 {
+    font-family: 'Syncopate-Bold','Merriweather', 'Helvetica Neue', Arial, sans-serif;
+  }
+}
+
+#reddeer .first {
+  padding: 5rem !important;
+}
+
 #libraclips {
   padding: 0 !important;
   border-bottom: 1px solid #979797;
@@ -311,6 +471,19 @@ header.masthead .jumbotron {
   padding: 5rem;
 }
 
+#libraclips h5 {
+  font-family: 'Syncopate-Bold','Merriweather', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: bold;
+}
+
+#libraclips p {
+  font-family: 'Montserrat-Light','Merriweather', 'Helvetica Neue', Arial, sans-serif;
+}
+
+#libraclips .first {
+  padding: 9rem !important;
+}
+
 #cardplus {
   padding: 0 !important;
   border-bottom: 1px solid #979797;
@@ -322,6 +495,19 @@ header.masthead .jumbotron {
 
 #cardplus .vdivide {
   padding: 5rem;
+}
+
+#cardplus h5 {
+  font-family: 'Syncopate-Bold','Merriweather', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: bold;
+}
+
+#cardplus p {
+  font-family: 'Montserrat-Light','Merriweather', 'Helvetica Neue', Arial, sans-serif;
+}
+
+#cardplus .first {
+  padding: 7rem !important;
 }
 
 .fullwidthhr {
@@ -343,6 +529,35 @@ footer .home1 {
   background-color: #fff;
 }
 
+#clientele h1 {
+  font-family: 'Syncopate-Bold','Merriweather', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1rem;
+}
+
+@media (min-width: 1200px) {
+  #clientele h1 {
+    font-family: 'Syncopate-Bold','Merriweather', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 2rem;
+  }
+}
+
+#clientele .mm {
+  font-family: Montserrat-Medium;
+}
+
+.abouthead header.masthead {
+  max-height: 642px;
+}
+
+.abouthead h3 {
+  font-family: 'Syncopate-Bold','Merriweather', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1rem;
+}
+
+.abouthead .lead {
+  font-family: 'Montserrat-Light','Merriweather', 'Helvetica Neue', Arial, sans-serif;
+}
+
 @media (max-width: 768px) and (min-width: 500px) {
   .abouthead h3 {
     font-size: 1rem;
@@ -358,6 +573,20 @@ footer .home1 {
   }
 }
 
+.librahead {
+  max-height: 642px;
+}
+
+.librahead h3 {
+  font-family: 'Syncopate-Bold','Merriweather', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.librahead .lead {
+  font-family: 'Montserrat-Light','Merriweather', 'Helvetica Neue', Arial, sans-serif;
+}
+
 #contact {
   background: #fff;
 }
@@ -368,6 +597,15 @@ footer .home1 {
 
 #tf-features {
   background: #fff;
+}
+
+#tf-features a {
+  color: #000;
+  font-weight: 100 !important;
+}
+
+#tf-features .nav-pills > li.active > a {
+  color: #fff;
 }
 
 #tf-features,
@@ -387,6 +625,8 @@ footer .home1 {
 
 .nav.nav-pills > li {
   min-width: 100%;
+  font-family: 'Syncopate-Bold','Merriweather', 'Helvetica Neue', Arial, sans-serif;
+  text-transform: uppercase;
 }
 
 .nav.nav-pills > li > a {
@@ -411,6 +651,16 @@ footer .home1 {
   color: #fff;
   background-color: #2A3B8E;
   padding: 25px;
+  border-bottom: 3px solid #2a3b8e;
+}
+
+.nav.nav-pills > li > a:hover {
+  background-color: #f0efef;
+  border-bottom: 0.5px solid #f0efef;
+}
+
+.nav-pills > li.active > a:hover {
+  background-color: #2A3B8E;
   border-bottom: 3px solid #2a3b8e;
 }
 
@@ -501,4 +751,116 @@ ul.features li span.fa {
     -webkit-transition: border .2s ease-in-out;
     transition: border .2s ease-in-out;
   }
+}
+
+#contactproduct {
+  background: #fbfbfb;
+}
+
+#contactabout {
+  background: #fbfbfb;
+}
+
+#contactabout h3 {
+  font-family: 'Syncopate-Bold','Merriweather', 'Helvetica Neue', Arial, sans-serif;
+}
+
+#contactabout .shead {
+  font-size: 16px !important;
+  color: #716d6d !important;
+}
+
+#contactabout .mtop {
+  margin-top: 5rem !important;
+}
+
+.client {
+  margin-top: 20px;
+}
+
+.client .thumbnail:hover {
+  background: rgba(0, 0, 0, 0.55);
+  -webkit-transform: scale(1.1);
+}
+
+.fullwidth {
+  min-width: 100% !important;
+}
+
+.borderr {
+  border-right: 1px solid #979797;
+}
+
+.borderl {
+  border-left: 1px solid #979797;
+}
+
+.products .sidesectionhead {
+  font-family: 'Syncopate-Bold','Merriweather', 'Helvetica Neue', Arial, sans-serif;
+  margin-left: 1rem;
+}
+
+@media (min-width: 1800px) {
+  .products .sidesectionhead {
+    margin-left: 6rem;
+  }
+}
+
+.products .indiph {
+  font-family: 'Syncopate-Bold','Merriweather', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 20px;
+}
+
+.products .caption-text {
+  font-size: 16px;
+  color: #000;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #fff;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #fff;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 250px;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 0.7rem !important;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  color: #2A3B8E;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block;
 }

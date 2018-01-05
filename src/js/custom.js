@@ -8,7 +8,7 @@
         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
         if (target.length) {
           $('html, body').animate({
-            scrollTop: (target.offset().top - 57)
+            scrollTop: (target.offset().top - 70)
           }, 1000, "easeInOutExpo");
           return false;
         }
@@ -23,7 +23,7 @@
     // Activate scrollspy to add active class to navbar items on scroll
     $('body').scrollspy({
       target: '#mainNav',
-      offset: 57
+      offset: 140
     });
   
     // Collapse Navbar
@@ -65,9 +65,40 @@
       $('.nav-stacked li.active').removeClass('active');
       $(this).addClass('active');
   });
+
+
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+
+  /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+  function myFunction() {
+    // var aColl = document.getElementById('n4');
+    // aColl.style.marginTop = "7rem";
+    document.getElementById("myDropdown").classList.toggle("show");
+    document.getElementById("n4").classList.toggle("n4");
+  }
+
+  // Close the dropdown menu if the user clicks outside of it
+  window.onclick = function (event) {
+    if (!event.target.matches('.dropbtn')) {
+
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+  
   })(jQuery); // End of use strict
 
 
-  // document.getElementByClass("nav-stacked").onclick = function() {
-
-  // };

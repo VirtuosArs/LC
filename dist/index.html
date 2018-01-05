@@ -16,7 +16,7 @@
   <nav class="navbar navbar-expand-lg navbar-light fixed-top mainnavn" id="mainNav">
     <div class="container-fluid">
       <a class="navbar-brand js-scroll-trigger" href="#home">
-        <!-- <img src="img/tb_logo1.png" class="img-logo" alt="Logo"> -->LC
+        <img src="img/libraclips/logo.svg" class="img-logo" alt="Logo">
       </a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
         aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,9 +24,6 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <!-- <li class="nav-item">
-        <a class="nav-link js-scroll-trigger" href="#about">About</a>
-      </li> -->
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#reddeer">RED DEER</a>
           </li>
@@ -36,8 +33,34 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#cardplus">CARD PlUS</a>
           </li>
+          <li class="nav-item">
+            <span class="sideham" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+          </li>
         </ul>
       </div>
+
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <div class="dropdown">
+          <a onclick="myFunction()" class="dropbtn">Products
+            <span class="dropdown-toggle" onclick="myFunction()"></span>
+          </a>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="reddeer.html">RED DEER</a>
+            <a href="libraclips.html">LIBRA CLIPS</a>
+            <a href="cardplus.html">CARD PLUS</a>
+          </div>
+        </div>
+        <a href="about.html#clientele" class="n0" id="n4">Clientele</a>
+        <a href="about.html#contactabout" class="n5">Contact Us</a>
+      </div>
+      <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div> -->
     </div>
   </nav>
 
@@ -55,12 +78,29 @@
         <div class="col">
           <div class="jumbotron">
             <div class="col-12 mx-auto">
-              <h1 class="display-4">CORPORATE COLLATERALS &amp; MERCHANDISE</h1>
+              <h1 class="display-4 head1">
+                <strong>CORPORATE COLLATERALS &amp; MERCHANDISE</strong>
+              </h1>
             </div>
-            <div class="col-lg-10 mx-auto">
-              <p class="lead">HIGH-QUALITY QUICK-TURNAROUND PRODUCTS IN EVERY CATEGORY.</p>
+            <div class="col-lg-12 mx-auto">
+              <p class="lead subhead">HIGH-QUALITY QUICK-TURNAROUND PRODUCTS IN EVERY CATEGORY.</p>
               <!-- <hr class="my-4"> -->
-              <p>Images will go here</p>
+              <div class="container">
+                <div class="row d-md-flex mt-4 text-center">
+                  <div class="col-sm-4 mt-2 wow fadeIn">
+                    <img src="img/libraclips/logo.svg" class="img-logo" alt="Logo">
+                  </div>
+                  <div class="col-sm-4 mt-2 wow fadeIn">
+                    <img src="img/home/logo2.svg" class="img-logo" alt="Logo">
+                  </div>
+                  <div class="col-sm-4 mt-2 wow fadeIn">
+                    <img src="img/home/logo3.svg" class="img-logo" alt="Logo">
+                  </div>
+                </div>
+              </div>
+              <!-- <p>
+                  <img src="http://placehold.it/600x150/000/fff" class="img-logo" alt="Logo">
+              </p> -->
             </div>
             <!-- <p class="lead">
               <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
@@ -73,25 +113,25 @@
 
   <section class="bg-white" id="reddeer">
     <div class="container-fluid">
-      <div class="row vdivide">
+      <div class="row">
         <!-- <div class="col-lg-8 mx-auto text-center">
             <h2 class="section-heading text-white">This template has got what you need!</h2>
             <hr class="light my-4">
             <p class="text-faded mb-4">This Bootstrap template has everything you need to get your new website up and running in no time! Just clone the template and Enjoy!</p>
             <a class="btn btn-light btn-xl js-scroll-trigger sr-button" href="#">Get Started!</a>
           </div> -->
-        <div class="col-3 offset-md-1 first">
-          <h2 class="section-heading text-secondary text-left">LANYARD AHEAD</h2>
+        <div class="col-md-4 col-xs-12 first borderr">
+          <h5 class="section-heading text-secondary text-left">LANYARD AHEAD</h5>
           <p class="text-secondary text-left mb-4">Our products consists of promotional lanyards, specialty multi-coloured lanyards, customized lanyards (assorted)
-            with various type of fittings, assorted cardholders colour & designs, export quality retractable badge reels
+            with various type of fittings, assorted cardholders colour &amp; designs, export quality retractable badge reels
             (yoyo’s) and more. Not to forget the uncompromising quality that is the Hallmark and the registered trademark
             of Libra.</p>
-          <a class="btn btn-primary js-scroll-trigger sr-button morebutton" href="#">More</a>
+          <a class="btn btn-primary js-scroll-trigger sr-button morebutton" href="reddeer.html">More</a>
         </div>
-        <div class="col-7 mx-auto text-center">
-          <img src="#" alt="band Image">
-          <br>
-          <img src="#" alt="Logo">
+        <div class="col-8 mx-auto text-center">
+          <img src="img/home/b1.png" class="img-fluid fullwidth" alt="band Image">
+          <!-- <br>
+          <img src="http://placehold.it/600x150/000/fff" class="img-fluid pt-3" alt="Logo"> -->
         </div>
       </div>
 
@@ -101,17 +141,17 @@
 
   <section class="bg-white" id="libraclips">
     <div class="container-fluid">
-      <div class="row vdivide">
-        <div class="col-7 mx-auto text-center">
-          <img src="#" alt="band Image">
-          <br>
-          <img src="#" alt="Logo">
+      <div class="row">
+        <div class="col-8 mx-auto text-center">
+          <img src="img/home/b2.png" class="img-fluid fullwidth" alt="band Image">
+          <!-- <br>
+          <img src="http://placehold.it/600x150/000/fff" class="img-fluid pt-3" alt="Logo"> -->
         </div>
 
-        <div class="col-3 first">
-          <h2 class="section-heading text-secondary text-left">CARDS ON THE TABlE.</h2>
+        <div class="col-md-4 col-xs-12 first borderl">
+          <h5 class="section-heading text-secondary text-left">CARDS ON THE TABlE.</h5>
           <p class="text-secondary text-left mb-4">Manufacturer’s of customized I.D Cards, Authenticity, magnetic, barcode, loyalty, membership cards etc.</p>
-          <a class="btn btn-primary js-scroll-trigger sr-button morebutton" href="#">More</a>
+          <a class="btn btn-primary js-scroll-trigger sr-button morebutton" href="libraclips.html">More</a>
         </div>
         <div class="col-1"></div>
 
@@ -123,18 +163,18 @@
 
   <section class="bg-white" id="cardplus">
     <div class="container-fluid">
-      <div class="row vdivide">
-        <div class="col-3 offset-md-1 first">
-          <h2 class="section-heading text-secondary text-left">WEAR YOUR BRAND ON YOUR SlEEVE.</h2>
+      <div class="row">
+        <div class="col-md-4 col-xs-12 first borderr">
+          <h5 class="section-heading text-secondary text-left">WEAR YOUR BRAND ON YOUR SlEEVE.</h5>
           <p class="text-secondary text-left mb-4">Red Deer Promotions is a professional, reasonable and reliable corporate merchandiser provider. We provide custom
             imprinted genuine products which are of high quality that help promote and showcase your brand in the organisation,
             creates loyalty amongst employees, customers and channel partners.</p>
-          <a class="btn btn-primary js-scroll-trigger sr-button morebutton" href="#">More</a>
+          <a class="btn btn-primary js-scroll-trigger sr-button morebutton" href="cardplus.html">More</a>
         </div>
-        <div class="col-7 mx-auto text-center">
-          <img src="#" alt="band Image">
-          <br>
-          <img src="#" alt="Logo">
+        <div class="col-8 mx-auto text-center">
+          <img src="img/home/b3.png" class="img-fluid fullwidth" alt="band Image">
+          <!-- <br>
+          <img src="http://placehold.it/600x150/000/fff" class="img-fluid pt-3" alt="Logo"> -->
         </div>
       </div>
 
@@ -144,7 +184,7 @@
 
   <footer>
     <div class="container">
-      <p class="home1">Copyright © 2010 Libra Clips. All rights reserved.</p>
+      <p class="home1">Copyright © 2018 Libra Clips. All rights reserved.</p>
     </div>
   </footer>
 
@@ -155,6 +195,39 @@
   <!-- Plugin JavaScript -->
   <script src="js/scripts.min.js"></script>
   <script src="js/custom.min.js"></script>
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+
+    /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      // var aColl = document.getElementById('n4');
+      // aColl.style.marginTop = "7rem";
+      document.getElementById("myDropdown").classList.toggle("show");
+      document.getElementById("n4").classList.toggle("n4");
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function (event) {
+      if (!event.target.matches('.dropbtn')) {
+
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
 </body>
 
 </html>

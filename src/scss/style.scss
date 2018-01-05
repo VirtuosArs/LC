@@ -2,154 +2,262 @@
 @import "mixins.scss";
 @import "global.scss";
 @import "bootstrap-overrides.scss";
+@font-face {
+    font-family: Montserrat-Medium;
+    src: url('../fonts/Montserrat-Medium.otf');
+}
+
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url('../fonts/Montserrat-Regular.otf');
+}
 
 body {
     color: $primary;
-    background: $gray-600;
+    background: $white;
 }
 
 // Styling for the navbar
 #mainNav {
-  border-bottom: 1px solid fade-out($gray-900, .9);
-  background-color: $white;
-  @include sans-serif-font;
-  @include transition-all;
-  .navbar-brand {
-      font-weight: 700;
-      text-transform: uppercase;
-      color: $primary;
-      @include sans-serif-font;
-      &:focus,
-      &:hover {
-          color: darken($primary, .1);
-      }
-  }
-  .img-logo {
-      max-width: 250px;
-      max-height: 60px;
-  }
-  .navbar-nav {
-      >li.nav-item {
-          >a.nav-link,
-          >a.nav-link:focus {
-              font-size: .9rem;
-              font-weight: 700;
-              text-transform: uppercase;
-              color: $gray-900;
-              &:hover {
-                  color: $primary;
-              }
-              &.active {
-                  color: $primary !important;
-                  background-color: transparent;
-                  &:hover {
-                      background-color: transparent;
-                  }
-              }
-          }
-      }
-  }
-  @media (min-width: 992px) {
-      border-color: transparent;
-      background-color: $white;
-      .navbar-brand {
-          color: fade-out($primary, .3);
-          &:focus,
-          &:hover {
-              color: $primary;
-          }
-      }
-      .navbar-nav>li.nav-item>a.nav-link {
-          padding: 0.5rem 1rem;
-      }
-      .navbar-nav>li.nav-item>a.nav-link,
-      .navbar-nav>li.nav-item>a.nav-link:focus {
-          color: fade-out($black, .3);
-          &:hover {
-              color: $primary;
-          }
-          &.active {
-              border-bottom: 2px solid $primary;
-          }
-      }
-      &.navbar-shrink {
-          border-bottom: 1px solid fade-out($gray-900, .9);
-          background-color: $white;
-          .navbar-brand {
-              color: $black;
-              &:focus,
-              &:hover {
-                  color: darken($primary, .1);
-              }
-          }
-          .navbar-nav>li.nav-item>a.nav-link,
-          .navbar-nav>li.nav-item>a.nav-link:focus {
-              color: $black;
-              &:hover {
-                  color: $primary;
-              }
-          }
-          .img-logo {
-              max-width: 250px;
-              max-height: 60px;
-          }
-      }
-      .img-logo {
-          max-width: 250px;
-          max-height: 100px;
-      }
-  }
-  font-family: din-regular !important;
-  letter-spacing: 0.1rem;
-}
-  
+    border-bottom: 1px solid fade-out($gray-900, .9);
+    background-color: $white;
+    @include heading-regular-font;
+    @include transition-all;
+    .navbar-brand {
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $primary;
+        @include heading-regular-font;
+        &:focus,
+        &:hover {
+            color: darken($primary, .1);
+        }
+    }
+    .img-logo {
+        max-width: 250px;
+        max-height: 60px;
+    }
+    .navbar-nav {
+        >li.nav-item {
+            >a.nav-link,
+            >a.nav-link:focus {
+                font-size: .9rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: $secondary;
+                &:hover {
+                    color: $primary;
+                }
+                &.active {
+                    @include heading-font;
+                    color: $secondary !important;
+                    background-color: transparent;
+                    &:hover {
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 992px) {
+        border-color: transparent;
+        background-color: $white;
+        .navbar-brand {
+            color: fade-out($primary, .3);
+            &:focus,
+            &:hover {
+                color: $primary;
+            }
+        }
+        .navbar-nav>li.nav-item>a.nav-link {
+            padding: 0.5rem 1rem;
+        }
+        .navbar-nav>li.nav-item>a.nav-link,
+        .navbar-nav>li.nav-item>a.nav-link:focus {
+            color: $secondary;
+            &:hover {
+                color: $primary;
+            }
+            &.active {
+                border-bottom: 2px solid $primary;
+            }
+        }
+        &.navbar-shrink {
+            border-bottom: 1px solid fade-out($gray-900, .9);
+            background-color: $white;
+            .navbar-brand {
+                color: $black;
+                &:focus,
+                &:hover {
+                    color: darken($primary, .1);
+                }
+            }
+            .navbar-nav>li.nav-item>a.nav-link,
+            .navbar-nav>li.nav-item>a.nav-link:focus {
+                color: $black;
+                &:hover {
+                    color: $primary;
+                }
+            }
+            .img-logo {
+                max-width: 250px;
+                max-height: 60px;
+            }
+        }
+        .img-logo {
+            max-width: 250px;
+            max-height: 100px;
+        }
+    } // font-family: din-regular !important;
+    letter-spacing: 0.1rem;
 
-  // Styling for the masthead
+
+    //Side hamburger menu
+    .navside {
+    display: block;
+    border: none;
+    cursor: pointer;
+    }
+
+
+    .n0 {
+        margin-top: 0rem;
+    }
+
+
+    .n4 {
+        margin-top: 6.3rem;
+    }
+
+
+    /* The side navigation menu */
+.sidenav {
+    // height: 100%; /* 100% Full-height */
+    height: auto;
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color: $white; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    padding-bottom: 3rem;
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    @include heading-regular-font;
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $secondary;
+    display: block;
+    transition: 0.3s;
+}
+
+.sideham {
+    color: $secondary;
+    padding-left: 3px;
+}
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: $primary;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+
+} // Styling for the masthead
 header.masthead {
     padding-top: 10rem;
     padding-bottom: calc(10rem - 56px);
     background-image: url('../img/header.jpeg');
     background-position: center center;
-    box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.7);
+    // box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.1);
     @include background-cover;
     hr {
-      margin-top: 30px;
-      margin-bottom: 30px;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
     h1 {
-      font-size: 2rem;
+        @include heading-regular-font;
+        font-size: 2rem;
+        font-weight: bold;
     }
     p {
-      font-weight: 300;
+        @include heading-regular-font;
+        font-weight: 300; // letter-spacing: 0.07rem;
     }
     @media (min-width: 768px) {
-      p {
-        font-size: 1.15rem;
-      }
-    }
+        p {
+            @include heading-regular-font;
+            font-size: 1.15rem;
+        }
+        .subhead {
+            letter-spacing: 0.07rem;
+        }
+    } // .head1 {
+    //     @include heading-regular-font;
+    //     font-weight: bold;
+    // }
     @media (min-width: 992px) {
-      height: 100vh;
-      min-height: 650px;
-      padding-top: 0;
-      padding-bottom: 0;
-      h1 {
-        font-size: 2rem;
-      }
+        height: 100vh;
+        min-height: 650px;
+        padding-top: 0;
+        padding-bottom: 0;
+        h1 {
+            @include heading-regular-font;
+            font-size: 2rem;
+        }
     }
     @media (min-width: 1200px) {
-      h1 {
-        font-size: 2rem;
-      }
+        h1 {
+            @include heading-regular-font;
+            font-size: 2rem;
+        }
     }
-
     .jumbotron {
-        background-color:  rgba(255, 255, 255, 0.95) !important;
+        background-color: rgba(255, 255, 255, 0.95) !important;
         box-shadow: 3px 5px 11px 0 rgba(0, 0, 0, 0.5) !important;
         color: #000;
-      }
+    }
+}
 
-  }
+header.librahead {
+    background-image: url('../img/libraclips/header.png');
+    @media (min-width: 1024px) {
+        .jumbotron {
+            margin-top: 7rem !important;
+        }
+    }
+}
 
+header.librahead {
+    background-image: url('../img/libraclips/header.png');
+}
 
 #reddeer {
     padding: 0 !important;
@@ -159,6 +267,27 @@ header.masthead {
     border-bottom: 1px solid #979797;
     .vdivide {
         padding: 5rem;
+    }
+    h5 {
+        @include heading-font;
+        font-weight: bold;
+    }
+    p {
+        @include serif-font;
+    }
+    @media (min-width: 768px) {}
+    @media (min-width: 992px) {
+        h5 {
+            @include heading-font; // font-size: 2rem;
+        }
+    }
+    @media (min-width: 1200px) {
+        h1 {
+            @include heading-font; // font-size: 2rem;
+        }
+    }
+    .first {
+        padding: 5rem !important;
     }
 }
 
@@ -171,8 +300,18 @@ header.masthead {
     .vdivide {
         padding: 5rem;
     }
-}   
-  
+    h5 {
+        @include heading-font;
+        font-weight: bold;
+    }
+    p {
+        @include serif-font;
+    }
+    .first {
+        padding: 9rem !important;
+    }
+}
+
 #cardplus {
     padding: 0 !important;
     .morebutton {
@@ -182,12 +321,21 @@ header.masthead {
     .vdivide {
         padding: 5rem;
     }
+    h5 {
+        @include heading-font;
+        font-weight: bold;
+    }
+    p {
+        @include serif-font;
+    }
+    .first {
+        padding: 7rem !important;
+    }
 }
 
 .fullwidthhr {
     max-width: 100%;
 }
-
 
 footer {
     padding: 0.1rem 0;
@@ -199,15 +347,35 @@ footer {
     }
 }
 
-
-
 //About 
-
 #clientele {
     background-color: $white;
+    h1 {
+        @include heading-font;
+        font-size: 1rem
+    }
+    @media (min-width: 1200px) {
+        h1 {
+            @include heading-font;
+            font-size: 2rem;
+        }
+    }
+    .mm {
+        font-family: Montserrat-Medium;
+    }
 }
 
 .abouthead {
+    header.masthead {
+        max-height: 642px;
+    }
+    h3 {
+        @include heading-font;
+        font-size: 1rem;
+    }
+    .lead {
+        @include serif-font;
+    }
     @media (max-width: 768px) and (min-width: 500px) {
         h3 {
             font-size: 1rem;
@@ -219,7 +387,18 @@ footer {
             flex: 0 0 83.33333%;
             max-width: 83.33333%;
         }
+    }
+}
 
+.librahead {
+    max-height: 642px;
+    h3 {
+        @include heading-font;
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+    .lead {
+        @include serif-font;
     }
 }
 
@@ -228,56 +407,85 @@ footer {
 }
 
 //Reddeer 
-
 .reddeerhead {
     max-height: 642px;
 }
-
-
-
 
 //Libraclips
 #tf-features {
     background: $white;
 }
 
+#tf-features {
+    a {
+        color: $secondary;
+        font-weight: 100 !important;
+    }
+    .nav-pills>li.active>a {
+        color: $white;
+    }
+}
 
 #tf-features,
-#feature { padding: 60px 0 }
-.features-content { padding: 0 30px 0 }
+#feature {
+    padding: 60px 0
+}
+
+.features-content {
+    padding: 0 30px 0
+}
+
 .features-content h4 {
     text-transform: uppercase;
     margin-bottom: 20px;
     color: $secondary;
 }
-.nav.nav-pills > li {
+
+.nav.nav-pills>li {
     min-width: 100%;
+    @include heading-font;
+    text-transform: uppercase;
 }
 
-.nav.nav-pills > li > a {
+.nav.nav-pills>li>a {
     position: relative;
     display: block;
     background-color: #ffffff;
-    padding: 25px;
-    // border-bottom: 3px solid #cccccc;
+    padding: 25px; // border-bottom: 3px solid #cccccc;
     text-transform: uppercase;
     margin-bottom: 5px;
     text-decoration: none;
 }
-.nav.nav-pills > li > a small {
+
+.nav.nav-pills>li>a small {
     text-transform: lowercase;
     font-style: italic;
 }
-.nav.nav-pills > li > a:hover,
-.nav-pills > li.active > a,
-.nav-pills > li.active > a:hover,
-.nav-pills > li.active > a:focus {
+
+.nav.nav-pills>li>a:hover,
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:hover,
+.nav-pills>li.active>a:focus {
     color: #fff;
     background-color: $primary;
     padding: 25px;
     border-bottom: 3px solid darken($primary, .1);
 }
-.nav-pills > li > a { border-radius: 4px }
+
+.nav.nav-pills>li>a:hover {
+    background-color: $navhover;
+    border-bottom: 0.5px solid darken($navhover, .1);
+}
+
+.nav-pills>li.active>a:hover {
+    background-color: $primary;
+    border-bottom: 3px solid darken($primary, .1);
+}
+
+.nav-pills>li>a {
+    border-radius: 4px
+}
+
 ul.features li span.fa {
     font-size: 35px;
     vertical-align: middle;
@@ -287,50 +495,48 @@ ul.features li span.fa {
     margin-top: 5px;
 }
 
-
-
 .list-grid-demo .glyphicon {
-	margin-right: 5px;
+    margin-right: 5px;
 }
+
 @media only screen and (min-width: 481px) {
-	.grid-group-wrapper.row {
-		display: flex;
-		flex-wrap: wrap;
-	}
-	.grid-group-wrapper.row:after,
-	.grid-group-wrapper.row:before {
-		display: flex;
-	}
-	.grid-group-wrapper.row {
-		> [class*='col-'] {
-			display: flex;
-			flex-direction: column;
-		}
-		.thumbnail,
-		.caption {
-			display: flex;
-			flex: 1 0 auto;
-			flex-direction: column;
-		}
-		.caption-text {
-			flex-grow: 1;
-		}
-		img {
-			width: 100%;
-			height: auto;
-		}
-		.price-buy-spacing {
-			display: flex;
-			justify-content: space-between;
-		}
-		.price-buy-spacing .lead {
-			margin-bottom: 0px;
-		}
-		.price-buy-spacing {
-			margin-bottom: 10px;
-		}
+    .grid-group-wrapper.row {
+        display: flex;
+        flex-wrap: wrap;
     }
-    
+    .grid-group-wrapper.row:after,
+    .grid-group-wrapper.row:before {
+        display: flex;
+    }
+    .grid-group-wrapper.row {
+        >[class*='col-'] {
+            display: flex;
+            flex-direction: column;
+        }
+        .thumbnail,
+        .caption {
+            display: flex;
+            flex: 1 0 auto;
+            flex-direction: column;
+        }
+        .caption-text {
+            flex-grow: 1;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+        .price-buy-spacing {
+            display: flex;
+            justify-content: space-between;
+        }
+        .price-buy-spacing .lead {
+            margin-bottom: 0px;
+        }
+        .price-buy-spacing {
+            margin-bottom: 10px;
+        }
+    }
     .thumbnail {
         display: block;
         padding: 4px;
@@ -345,4 +551,107 @@ ul.features li span.fa {
     }
 }
 
+#contactproduct {
+    background: #fbfbfb;
+}
 
+#contactabout {
+    background: #fbfbfb;
+    h3 {
+        @include heading-font;
+    }
+    .shead {
+        font-size: 16px !important;
+        color: #716d6d !important;
+    }
+    .mtop {
+        margin-top: 5rem !important;
+    }
+}
+
+.client {
+    margin-top: 20px;
+}
+
+.client .thumbnail:hover {
+    background: rgba(0, 0, 0, 0.55);
+    -webkit-transform: scale(1.1);
+}
+
+.fullwidth {
+    min-width: 100% !important;
+}
+
+.borderr {
+    border-right: 1px solid #979797;
+}
+
+.borderl {
+    border-left: 1px solid #979797;
+}
+
+.products {
+    .sidesectionhead {
+        @include heading-font;
+        margin-left: 1rem;
+        @media (min-width: 1800px) {
+            margin-left: 6rem;
+        }
+    }
+    .indiph {
+        @include heading-font;
+        font-size: 20px;
+    }
+    .caption-text {
+        font-size: 16px;
+        color: $secondary;
+    }
+}
+
+
+//Dropdown 
+/* Dropdown Button */
+.dropbtn {
+    background-color: $white;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: $white;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: $white;
+    min-width: 250px;
+    // box-shadow: 0px 8px 16px 0px rgba(0,0,0,0);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.7rem !important;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {color: $primary}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}

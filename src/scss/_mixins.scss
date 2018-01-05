@@ -1,3 +1,19 @@
+@font-face {
+  font-family: Montserrat-Light;
+  src: url('../fonts/Montserrat-Light.otf');
+}
+
+@font-face {
+  font-family: Syncopate-Bold;
+  src: url('../fonts/Syncopate-Bold.ttf');
+}
+
+@font-face {
+  font-family: Syncopate-Regular;
+  src: url('../fonts/Syncopate-Regular.ttf');
+}
+
+
 // Mixins
 @mixin transition-all() {
     -webkit-transition: all 0.2s;
@@ -11,9 +27,18 @@
     background-size: cover;
   }
   @mixin serif-font() {
-    font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Montserrat-Light','Merriweather', 'Helvetica Neue', Arial, sans-serif;
   }
+
   @mixin sans-serif-font() {
-    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Montserrat-Light','Open Sans', 'Helvetica Neue', Arial, sans-serif;
   }
   
+
+  @mixin heading-font() {
+    font-family: 'Syncopate-Bold','Merriweather', 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  @mixin heading-regular-font() {
+    font-family: 'Syncopate-Regular','Merriweather', 'Helvetica Neue', Arial, sans-serif;
+  }

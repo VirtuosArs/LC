@@ -16,7 +16,7 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top mainnavn" id="mainNav">
         <div class="container-fluid">
             <a class="navbar-brand js-scroll-trigger" href="index.html">
-                <!-- <img src="img/tb_logo1.png" class="img-logo" alt="Logo"> -->LC
+                <img src="http://placehold.it/600x150/000/fff" class="img-logo" alt="Logo">
             </a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,9 +24,6 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <!-- <li class="nav-item">
-        <a class="nav-link js-scroll-trigger" href="#about">About</a>
-      </li> -->
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#reddeer">RED DEER</a>
                     </li>
@@ -36,7 +33,28 @@
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#cardplus">CARD PlUS</a>
                     </li>
+                    <li class="nav-item">
+                        <span class="sideham" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+                    </li>
                 </ul>
+            </div>
+
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <div class="dropdown">
+                    <a onclick="myFunction()" class="dropbtn">Products
+                        <span class="dropdown-toggle" onclick="myFunction()"></span>
+                    </a>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="reddeer.html">RED DEER</a>
+                        <a href="libraclips.html">LIBRA CLIPS</a>
+                        <a href="cardplus.html">CARD PLUS</a>
+                    </div>
+                </div>
+                <a href="about.html#clientele" class="n0" id="n4">Clientele</a>
+                <a href="about.html#contactabout" class="n5">Contact Us</a>
             </div>
         </div>
     </nav>
@@ -77,7 +95,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-10 text-left text-secondary">
-                    <h1>CLIENTELE</h1>
+                    <h1 class="clienthead">CLIENTELE</h1>
                 </div>
             </div>
             <div class="row d-md-flex mt-4 text-center">
@@ -92,8 +110,11 @@
                             </p>
                             <br>
                             <p class="card-text text-secondary text-right name">
-                                <strong>Mukund Rao</strong>
-                                <br> Moving Brands
+                                <strong>
+                                    <span class="mm">Mukund Rao</span>
+                                </strong>
+                                <br>
+                                <span class="mm1">Moving Brands</span>
                             </p>
 
                         </div>
@@ -109,8 +130,11 @@
                             </p>
                             <br>
                             <p class="card-text text-secondary text-right name">
-                                <strong>K. Ajith</strong>
-                                <br> ID Tag Systems
+                                <strong>
+                                    <span class="mm">K. Ajith</span>
+                                </strong>
+                                <br>
+                                <span class="mm1">ID Tag Systems</span>
                             </p>
 
                         </div>
@@ -127,94 +151,131 @@
                             </p>
                             <br>
                             <p class="card-text text-secondary text-right name">
-                                <strong>Shadab Sheikh</strong>
-                                <br> Reliance BIG Entertainment
+                                <strong>
+                                    <span class="mm">Shadab Sheikh</span>
+                                </strong>
+                                <br>
+                                <span class="mm1">Reliance BIG Entertainment</span>
                             </p>
-                            <!-- <h5 class="card-title pt-4 text-orange">Basic</h5>
-                                    <h3 class="card-title text-primary pt-4">FREE</h3>
-                                    <p class="card-text text-muted pb-3 border-bottom">per month</p>
-                                    <ul class="list-unstyled pricing-list">
-                                        <li>Free setup</li>
-                                        <li>100MB storage</li>
-                                        <li>1GB bandwidth</li>
-                                        <li>Basic support</li>
-                                    </ul>
-                                    <a href="#" class="btn btn-primary btn-radius">Order Now</a> -->
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- <div class="col-4">
-
-                </div>
-                <div class="col-4"></div>
-                <div class="col-4"></div> -->
             <br>
             <div class="row">
-                Clientele images will go here.
+
+                <div class="container">
+                    <div class="row d-md-flex mt-4 text-center">
+                        <div class="col-sm-3 mt-2 wow fadeIn">
+                            <img src="http://placehold.it/600x150/000/fff" class="img-fluid" alt="Logo">
+                        </div>
+                        <div class="col-sm-3 mt-2 wow fadeIn">
+                            <img src="http://placehold.it/600x150/000/fff" class="img-fluid" alt="Logo">
+                        </div>
+                        <div class="col-sm-3 mt-2 wow fadeIn">
+                            <img src="http://placehold.it/600x150/000/fff" class="img-fluid" alt="Logo">
+                        </div>
+                        <div class="col-sm-3 mt-2 wow fadeIn">
+                            <img src="http://placehold.it/600x150/000/fff" class="img-fluid" alt="Logo">
+                        </div>
+                        <div class="col-sm-3 mt-2 wow fadeIn">
+                            <img src="http://placehold.it/600x150/000/fff" class="img-fluid" alt="Logo">
+                        </div>
+                        <div class="col-sm-3 mt-2 wow fadeIn">
+                            <img src="http://placehold.it/600x150/000/fff" class="img-fluid" alt="Logo">
+                        </div>
+                        <div class="col-sm-3 mt-2 wow fadeIn">
+                            <img src="http://placehold.it/600x150/000/fff" class="img-fluid" alt="Logo">
+                        </div>
+                        <div class="col-sm-3 mt-2 wow fadeIn">
+                            <img src="http://placehold.it/600x150/000/fff" class="img-fluid" alt="Logo">
+                        </div>
+                        <div class="col-sm-3 mt-2 wow fadeIn">
+                            <img src="http://placehold.it/600x150/000/fff" class="img-fluid" alt="Logo">
+                        </div>
+                        <div class="col-sm-3 mt-2 wow fadeIn">
+                            <img src="http://placehold.it/600x150/000/fff" class="img-fluid" alt="Logo">
+                        </div>
+                        <div class="col-sm-3 mt-2 wow fadeIn">
+                            <img src="http://placehold.it/600x150/000/fff" class="img-fluid" alt="Logo">
+                        </div>
+                        <div class="col-sm-3 mt-2 wow fadeIn">
+                            <img src="http://placehold.it/600x150/000/fff" class="img-fluid" alt="Logo">
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
 
         </div>
     </section>
 
-   
-    <section class="bg-white" data-section="contact">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-4 text-center">
-                  <div class="left">
-                    <h1 class="text-secondary text-left">Contact US</h1>
-                    <h5 class="text-secondary text-left mt-5 shead">Address</h5>
-                    <p class="text-left text-secondary">
-                            Libra Clips <br>
-                            Unit 5 &amp; 5A, Mistry Industrial Complex,<br>
-                            Cross Road “A” MIDC, Andheri (E),<br>
-                            Mumbai – 400 093. INDIA	
-                    </p>
+
+    <section id="contactabout">
+        <div class="container-fluid">
+            <div class="col-12 col-md-10 offset-md-1">
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <div class="left">
+                            <h3 class="text-secondary text-left">CONTACT US</h3>
+
+                            <h5 class="text-secondary text-left mt-5 shead mtop">ADDRESS</h5>
+                            <p class="text-left text-secondary">
+                                Libra Clips
+                                <br> Unit 5 &amp; 5A, Mistry Industrial Complex,
+                                <br> Cross Road “A” MIDC, Andheri (E),
+                                <br> Mumbai – 400 093. INDIA
+                            </p>
 
 
-                    <h5 class="text-secondary text-left mt-2 shead">Working Hours</h5>
-                    <p class="text-left text-secondary">
-                            Our office working hours are from: <br>
-                            Monday - Friday : 10 a.m. to 6.30 p.m. <br>
-                            Saturday : 10 a.m. to 4.00 p.m. <br>
-                            Closed on Sunday and Public Holidays
-                    </p>
-                  </div>
+                            <h5 class="text-secondary text-left mt-5 shead">WORKING HOURS</h5>
+                            <p class="text-left text-secondary">
+                                Our office working hours are from:
+                                <br> Monday - Friday : 10 a.m. to 6.30 p.m.
+                                <br> Saturday : 10 a.m. to 4.00 p.m.
+                                <br> Closed on Sunday and Public Holidays
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-7 offset-md-1">
+                        <form class="formright">
+                            <div class="form-group">
+                                <!-- <label for="c_name">Your Name</label> -->
+                                <div class="form-field">
+                                    <input type="text" id="c_name" class="form-control" placeholder="NAME">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <!-- <label for="c_email">Your Email</label> -->
+                                <div class="form-field">
+                                    <input type="text" id="c_email" class="form-control" placeholder="Email Address">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-field">
+                                    <input type="number" id="c_email" class="form-control" placeholder="Phone Number">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <!-- <label for="c_message">Your Message</label> -->
+                                <div class="form-field">
+                                    <textarea name="c_message" id="c_message" cols="30" rows="10" class="form-control" placeholder="Message"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" name="c_submit" id="c_submit" value="SUBMIT" class="btn btn-primary btn-lg js-scroll-trigger sr-button">
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <div class="col-md-7 col-md-push-1">
-                  <form class="formright">
-                    <div class="form-group">
-                      <label for="c_name">Your Name</label>
-                      <div class="form-field">
-                        <input type="text" id="c_name" class="form-control">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="c_email">Your Email</label>
-                      <div class="form-field">
-                        <input type="text" id="c_email" class="form-control">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="c_message">Your Message</label>
-                      <div class="form-field">
-                        <textarea name="c_message" id="c_message" cols="30" rows="10" class="form-control"></textarea>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <input type="submit" name="c_submit" id="c_submit" value="Send Message" class="btn btn-primary btn-lg">
-                    </div>
-                  </form>
-                </div>
-              </div>
             </div>
-          </section>
+        </div>
+    </section>
 
 
     <footer id="about">
         <div class="container">
-            <p class="home1">Copyright © 2010 Libra Clips. All rights reserved.</p>
+            <p class="home1">Copyright © 2018 Libra Clips. All rights reserved.</p>
         </div>
     </footer>
 
@@ -225,6 +286,39 @@
     <!-- Plugin JavaScript -->
     <script src="js/scripts.min.js"></script>
     <script src="js/custom.min.js"></script>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+        /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            // var aColl = document.getElementById('n4');
+            // aColl.style.marginTop = "7rem";
+            document.getElementById("myDropdown").classList.toggle("show");
+            document.getElementById("n4").classList.toggle("n4");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
 </body>
 
 </html>
