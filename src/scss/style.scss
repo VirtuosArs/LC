@@ -192,6 +192,7 @@ body {
 
 } // Styling for the masthead
 header.masthead {
+    max-height: 642px;
     padding-top: 10rem;
     padding-bottom: calc(10rem - 56px);
     background-image: url('../img/header.jpeg');
